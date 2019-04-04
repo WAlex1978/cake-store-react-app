@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { connect } from 'react-redux';
 
-import Section from '../../styled-components/Section';
-import Wrapper from '../../styled-components/Wrapper';
-import Image from '../../styled-components/Image';
-import Text from '../../styled-components/Text';
-import HR from '../../styled-components/HR';
+import Styled from '../../styled-components/Styled';
 
 const mapStateToProps = (state) => {
     return {
@@ -14,50 +9,27 @@ const mapStateToProps = (state) => {
     }
 }
 
-const StyledDiv = styled.div`
-    display: ${props => props.display ? (props.display) : null};
-    width: ${props => props.width ? (props.width) : null};
-    height: ${props => props.height ? (props.height) : null};
-    flex-direction: ${props => props.direction ? (props.direction) : null};
-    align-items: ${props => props.align ? (props.align) : null};
-    justify-content: ${props => props.justify ? (props.justify) : null};
-    grid-column: ${props => props.col ? (props.col) : null};
-    grid-row: ${props => props.row ? (props.row) : null};
-`
-
-const Grid = styled.div`
-    display: grid;
-    grid-template-col: 1fr 1fr;
-    grid-template-row: auto;
-    grid-row-gap .5rem;
-
-    @media(max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-`
-
 class CupCakes extends Component {
     render() { 
         return (
-            <Section>
-                <Wrapper>
-                    <Text size="2.8rem" margin="auto">Cupcakes</Text>
-                    <HR />
-                    <Grid>
+            <Styled.Section>
+                <Styled.Wrapper>
+                    <Styled.Text size="2.8rem" >Cupcakes</Styled.Text>
+                    <Styled.HR />
+                    <Styled.Grid>
                         {this.props.cupcake.map((cupcake, i) => (
-                            <StyledDiv key={cupcake.id} display="flex" col={i%2 === 0 ? (1): 2}>
-                                <Image image={cupcake.img} height="35vh" width="45%" />
-                                <StyledDiv width="60%" display="flex" direction="column" align="center" justify="center">
-                                    <Text size="2.4rem">{cupcake.title}</Text>
-                                    <Text>{cupcake.desc}</Text>
-                                </StyledDiv>
-                            </StyledDiv>
+                            <Styled.Div key={cupcake.id} display="flex" col={i%2 === 0 ? (1): 2} 
+                                onClick={() => this.props.toggle(cupcake)}>
+                                <Styled.Image image={cupcake.img} height="32vh" width="55%" />
+                                <Styled.Div width="60%" display="flex" direction="column" align="center" justify="center">
+                                    <Styled.Text size="2.4rem">{cupcake.title}</Styled.Text>
+                                    <Styled.Text size="1.5rem">{cupcake.desc}</Styled.Text>
+                                </Styled.Div>
+                            </Styled.Div>
                         ))}
-                    </Grid>
-                </Wrapper>
-            </Section>
+                    </Styled.Grid>
+                </Styled.Wrapper>
+            </Styled.Section>
         );
     }
 }
