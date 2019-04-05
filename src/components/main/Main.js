@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'shards-react';
 import Dialog from '@material-ui/core/Dialog';
 
+import Description from './Description';
 import Cakes from './Cakes';
 import CupCakes from './CupCakes';
-import Banner from './Banner';
-import Description from './Description';
-
 import Styled from '../../styled-components/Styled';
 
 const mapStateToProps = (state) => {
     return {
-        cupcake: state.cupcake,
+        cake: state.cake,
     }
 }
 
 class Main extends Component {
     state = {
-        item: this.props.cupcake[0],
+        item: this.props.cake[0],
         open: false,
+    }
+
+    addToCart = (item) => {
+        console.log(item);
     }
 
     openDialog = (item) => {
@@ -35,9 +37,9 @@ class Main extends Component {
 
     render() { 
         return (
-            <div>
-                <Banner />
+            <Fragment>
                 <Cakes toggle={this.openDialog} />
+                <Description />
                 <CupCakes toggle={this.openDialog} />
 
                 <Dialog open={this.state.open} onClose={this.closeDialog} fullWidth={true} maxWidth='md'>
@@ -46,12 +48,11 @@ class Main extends Component {
                         <Styled.Div width="50%" display="flex" direction="column" align="center" justify="center">
                             <Styled.Text size="2.4rem">{this.state.item.title}</Styled.Text>
                             <Styled.Text size="1.5rem" margin="0 0 20px 0">{this.state.item.desc}</Styled.Text>
-                            <Button outline squared theme="dark">Add to Cart</Button>
+                            <Button outline squared theme="dark" onClick={() => this.addToCart(this.state.item)}>Add to Cart</Button>
                         </Styled.Div>
                     </Styled.Div>
-                </Dialog>
-                
-            </div>
+                </Dialog> 
+            </Fragment>
         );
     }
 }

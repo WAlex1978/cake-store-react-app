@@ -12,10 +12,8 @@ const mapStateToProps = (state) => {
 class CupCakes extends Component {
     render() { 
         return (
-            <Styled.Section padding="60px 0 0 0">
+            <Styled.Section padding="40px 0 0 0">
                 <Styled.Wrapper>
-                    <Styled.Text size="2.8rem" >Cupcakes</Styled.Text>
-                    <Styled.HR />
                     <Styled.Grid>
                         {this.props.cupcake.map((cupcake, i) => (
                             <Styled.Div key={cupcake.id} display="flex" col={i%2 === 0 ? (1): 2} 

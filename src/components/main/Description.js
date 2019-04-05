@@ -4,16 +4,18 @@ import Styled from '../../styled-components/Styled';
 class Description extends Component {
     render() { 
         return (
-            <Styled.Section >
-                <Styled.Wrapper width="60%" style={{marginTop: "15px"}}>
-                    <Styled.Text size="2.4rem" align="center">
+            <Styled.Section color="rgb(33, 37, 41)" padding="15px 0 15px 0">
+                <Styled.Wrapper width="60%">
+                    <Styled.Text size="2rem" color="white" align="center">
                         Just as unique and special as you are.
                     </Styled.Text>
-                    <Styled.Text size="1.3rem" margin="5px">
+                    <Styled.Text size="1.1rem" color="white" margin="5px" align="center">
                         <p>The only prerequisite is that it makes you happy. If it makes you happy then it's good. 
-                        We don't really know where this goes - and I'm not sure we really care. 
+                        We don't really know where this goes and I'm not sure we really care. 
                         Maybe there's a happy little waterfall happening over here. 
-                        Let your imagination be your guide. Maybe there's a little something happening right here.</p>
+                        Let your imagination be your guide. Maybe there's a little something happening right here.
+                        It's life. It's interesting. It's fun. It's cold, but it's beautiful. We don't need any guidelines or formats. 
+                        All we need to do is just let it flow right out of us.</p>
                     </Styled.Text>
                 </Styled.Wrapper>
             </Styled.Section>
