@@ -6,7 +6,7 @@ const HR = styled.div`
     margin-top: 15px;
     margin-bottom: 15px;
     height: 1px;
-    width: 90%;
+    width: ${props => props.width ? (props.width) : "90%"};
 `
 
 export default HR;

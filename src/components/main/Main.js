@@ -52,7 +52,7 @@ class Main extends Component {
                 <CupCakes toggle={this.openDialog} />
 
                 <Dialog open={this.state.open} onClose={this.closeDialog} fullWidth={true} maxWidth='md'>
-                    <Styled.Div display="flex" color="rgb(233, 236, 239)">
+                    <Styled.Div display="flex" color="rgb(255, 224, 248)">
                         <Styled.Image image={this.state.item.img} height="60vh" width="60%" />
                         <Styled.Div width="50%" display="flex" direction="column" align="center" justify="center">
                             <Styled.Text size="2.4rem">{this.state.item.title}</Styled.Text>

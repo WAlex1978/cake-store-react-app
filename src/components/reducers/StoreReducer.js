@@ -33,7 +33,10 @@ const initState = {
         {id:13, title: "Floral Pastel", desc: "We have plenty of time.", img: cupcake5},
         {id:14, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6},
     ],
-    cart: []
+    cart: [
+        {id:9, title: "Strawberry Tart", desc: "Always one step further.", img: cupcake1, quantity: 1},
+        {id:12, title: "Royal Red", desc: "Wherever you want to be.", img: cupcake4, quantity: 2},
+    ]
 }
 
 const StoreReducer = (state = initState, action) => {
