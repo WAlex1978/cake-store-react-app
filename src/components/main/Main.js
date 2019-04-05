@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { addToCart } from '../actions/StoreActions';
 import { connect } from 'react-redux';
 import { Button } from 'shards-react';
 import Dialog from '@material-ui/core/Dialog';
@@ -14,6 +15,12 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps= (dispatch) => {
+    return{
+        addToCart: (item) => {dispatch(addToCart(item))}
+    }
+}
+
 class Main extends Component {
     state = {
         item: this.props.cake[0],
@@ -21,7 +28,8 @@ class Main extends Component {
     }
 
     addToCart = (item) => {
-        console.log(item);
+        this.props.addToCart(item);
+        this.setState({ open: false })
     }
 
     openDialog = (item) => {
@@ -57,4 +65,4 @@ class Main extends Component {
     }
 }
  
-export default connect (mapStateToProps) (Main);
+export default connect (mapStateToProps, mapDispatchToProps) (Main);

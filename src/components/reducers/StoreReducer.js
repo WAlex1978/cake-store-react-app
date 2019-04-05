@@ -32,11 +32,16 @@ const initState = {
         {id:4, title: "Royal Red", desc: "Wherever you want to be.", img: cupcake4},
         {id:5, title: "Floral Pastel", desc: "We have plenty of time.", img: cupcake5},
         {id:6, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6},
-    ]
+    ],
+    cart: []
 }
 
 const StoreReducer = (state = initState, action) => {
     switch(action.type) {
+        case 'ADD_TO_CART':
+            console.log(action.item);
+            return state;
+
         default:
           return state;
       }
