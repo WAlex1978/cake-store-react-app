@@ -4,8 +4,8 @@ import Styled from '../../styled-components/Styled';
 class Description extends Component {
     render() { 
         return (
-            <Styled.Section>
-                <Styled.Wrapper width="60%">
+            <Styled.Section >
+                <Styled.Wrapper width="60%" style={{marginTop: "15px"}}>
                     <Styled.Text size="2.4rem" align="center">
                         Just as unique and special as you are.
                     </Styled.Text>

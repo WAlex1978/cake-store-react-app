@@ -12,14 +12,14 @@ const mapStateToProps = (state) => {
 class CupCakes extends Component {
     render() { 
         return (
-            <Styled.Section>
+            <Styled.Section padding="60px 0 0 0">
                 <Styled.Wrapper>
                     <Styled.Text size="2.8rem" >Cupcakes</Styled.Text>
                     <Styled.HR />
                     <Styled.Grid>
                         {this.props.cupcake.map((cupcake, i) => (
                             <Styled.Div key={cupcake.id} display="flex" col={i%2 === 0 ? (1): 2} 
-                                onClick={() => this.props.toggle(cupcake)}>
+                                style={{cursor: "pointer"}} onClick={() => this.props.toggle(cupcake)}>
                                 <Styled.Image image={cupcake.img} height="32vh" width="55%" />
                                 <Styled.Div width="60%" display="flex" direction="column" align="center" justify="center">
                                     <Styled.Text size="2.4rem">{cupcake.title}</Styled.Text>

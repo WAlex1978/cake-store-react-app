@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Div = styled.div`
+    background-color: ${props => props.color ? (props.color) : null};
     display: ${props => props.display ? (props.display) : null};
     width: ${props => props.width ? (props.width) : null};
     height: ${props => props.height ? (props.height) : null};
