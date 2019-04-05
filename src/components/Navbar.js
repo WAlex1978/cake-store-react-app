@@ -37,7 +37,7 @@ export default class NavExample extends React.Component {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink active tag={Link} to="/order">
+              <NavLink active tag={Link} to="/cart">
                 Order
               </NavLink>
             </NavItem>
