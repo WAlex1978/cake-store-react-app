@@ -16,7 +16,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps= (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return{
         addToCart: (item) => {dispatch(addToCart(item))}
     }

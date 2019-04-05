@@ -6,6 +6,7 @@ const Text = styled.div`
     margin: ${props => props.margin ? (props.margin) : null};
     padding: ${props => props.padding ? (props.padding) : null};
     text-align: ${props => props.align ? (props.align) : null};
+    text-decoration: ${props => props.decoration ? (props.decoration) : null};
 `
 
 export default Text;
