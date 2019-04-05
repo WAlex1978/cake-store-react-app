@@ -12,6 +12,7 @@ import Styled from '../../styled-components/Styled';
 const mapStateToProps = (state) => {
     return {
         cake: state.cake,
+        cart: state.cart,
     }
 }
 
@@ -43,7 +44,7 @@ class Main extends Component {
         this.setState({ open: false })
     }
 
-    render() { 
+    render() {
         return (
             <Fragment>
                 <Cakes toggle={this.openDialog} />

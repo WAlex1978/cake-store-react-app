@@ -26,12 +26,12 @@ const initState = {
         {id:8, title: "Date Cake", desc: "Put your feelings into it.", img: cake8},
     ],
     cupcake: [
-        {id:1, title: "Strawberry Tart", desc: "Always one step further.", img: cupcake1},
-        {id:2, title: "Sweet Chocolate", desc: "There's really no end to this.", img: cupcake2},
-        {id:3, title: "Sweet Frosting", desc: "Something you can't fail at.", img: cupcake3},
-        {id:4, title: "Royal Red", desc: "Wherever you want to be.", img: cupcake4},
-        {id:5, title: "Floral Pastel", desc: "We have plenty of time.", img: cupcake5},
-        {id:6, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6},
+        {id:9, title: "Strawberry Tart", desc: "Always one step further.", img: cupcake1},
+        {id:10, title: "Sweet Chocolate", desc: "There's really no end to this.", img: cupcake2},
+        {id:11, title: "Sweet Frosting", desc: "Something you can't fail at.", img: cupcake3},
+        {id:12, title: "Royal Red", desc: "Wherever you want to be.", img: cupcake4},
+        {id:13, title: "Floral Pastel", desc: "We have plenty of time.", img: cupcake5},
+        {id:14, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6},
     ],
     cart: []
 }
@@ -39,11 +39,20 @@ const initState = {
 const StoreReducer = (state = initState, action) => {
     switch(action.type) {
         case 'ADD_TO_CART':
-            console.log(action.item);
-            return state;
+            let item = state.cart.find(item => action.item.id===item.id)
+            if (!item) {
+                action.item.quantity=1;
+                return {
+                    ...state,
+                    cart: [...state.cart, action.item]
+                }
+            }
+
+            item.quantity+=1;
+            return state
 
         default:
-          return state;
+            return state;
       }
 }
 
