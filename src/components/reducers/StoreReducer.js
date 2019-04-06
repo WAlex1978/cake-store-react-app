@@ -43,17 +43,17 @@ const initState = {
 const StoreReducer = (state = initState, action) => {
     switch(action.type) {
         case 'ADD_TO_CART':
-            state.total+=action.item.price;
+            state.total+=action.item.price*action.quantity;
             let item = state.cart.find(item => action.item.id === item.id);
             if (!item) {
-                action.item.quantity=1;
+                action.item.quantity=action.quantity;
                 return {
                     ...state,
                     cart: [...state.cart, action.item],
                 }
             }
 
-            item.quantity+=1;
+            item.quantity+=action.quantity;
             return state
 
         case 'REMOVE_FROM_CART':

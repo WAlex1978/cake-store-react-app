@@ -51,7 +51,7 @@ class CartItems extends Component {
                             </Row>
                         ))}
 
-                        {this.props.cart.length == 0 ? (
+                        {this.props.cart.length === 0 ? (
                             <Styled.Div width="100%" height="130px" display="flex" align="center" justify="center">
                                 <Styled.Text size="1.25rem">Cart is empty</Styled.Text>
                             </Styled.Div>

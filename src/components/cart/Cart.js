@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { NavLink, Button } from 'shards-react';
 import { connect } from 'react-redux';
 import Styled from '../../styled-components/Styled';
 
