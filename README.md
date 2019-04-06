@@ -6,9 +6,9 @@ Shopping cart based web application built in React that utilizes Redux for state
 
 Browse a variety of different cakes and add them to your shopping cart by a specified quantity amount.
 
-Update the quantity amount of a certain item or remove individual items from your shopping cart.
+Remove individual items from your shopping cart.
 
-Persist your shopping cart items between sessions by utilizing browser's local storage.
+Persists shopping cart items between sessions by utilizing browser's local storage.
 
 <h1>How to Use</h1>
 
