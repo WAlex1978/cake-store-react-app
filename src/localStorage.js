@@ -7,14 +7,17 @@ export const loadState = () => {
             return undefined;
         }
 
+        const parsedCart = JSON.parse(cart);
+
         return ({
             cake: initState.cake,
             cupcake: initState.cupcake,
-            cart: JSON.parse(cart.cart),
-            total: JSON.parse(cart.total),
+            cart: parsedCart.cart,
+            total: parsedCart.total,
         });
     }
     catch (err) {
+        console.log(err);
         return undefined;
     }
 }
