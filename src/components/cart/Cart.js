@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Button } from 'shards-react';
 import Styled from '../../styled-components/Styled';
-
 import CartItems from './CartItems';
-
 
 const mapStateToProps = (state) => {
     return {
@@ -19,9 +18,7 @@ class Cart extends Component {
             <Fragment>
                 <Styled.Section padding="40px 0 0 0">
                     <Styled.Wrapper width="75%">
-                        <Link to="/">
-                            <Styled.Text size="1.2rem" style={{display: "inline-block"}}>{"<"}- Continue Shopping</Styled.Text>
-                        </Link>
+                        <Link to="/"><Button size="lg" theme="null">{"<"} Continue Shopping</Button></Link>
                     </Styled.Wrapper>
                 </Styled.Section>
                 <CartItems />

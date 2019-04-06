@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Banner from './components/Banner';
-import Navbar from './components/Navbar';
+import Banner from './components/banner/Banner';
+import Navbar from './components/navbar/Navbar';
 import Main from './components/main/Main';
 import Cart from './components/cart/Cart';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Img from './images/main-banner.jpg';
+import Img from '../images/main-banner.jpg';
 
-import Image from '../styled-components/Image';
+import Image from '../../styled-components/Image';
 
 class Banner extends Component {
     render() { 
