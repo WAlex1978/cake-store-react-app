@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import { Navbar, NavbarToggler, NavbarBrand, Nav } from "shards-react";
 import { NavItem, NavLink, Collapse } from "shards-react";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faShoppingCart)
+
 export default class NavExample extends React.Component {
   constructor(props) {
     super(props);
@@ -35,10 +41,10 @@ export default class NavExample extends React.Component {
               <NavLink active tag={Link} to="/about">
                 About
               </NavLink>
-            </NavItem>
+            </NavItem>  
             <NavItem>
               <NavLink active tag={Link} to="/cart">
-                Order Online
+                <FontAwesomeIcon icon="shopping-cart" />
               </NavLink>
             </NavItem>
           </Nav>
