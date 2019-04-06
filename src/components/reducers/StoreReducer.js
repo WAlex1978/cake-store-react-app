@@ -14,7 +14,7 @@ import cupcake4 from '../images/royal-red.jpg';
 import cupcake5 from '../images/floral-pastel.jpg';
 import cupcake6 from '../images/party-muffin.jpg'
 
-const initState = {
+export const initState = {
     cake: [
         {id:1, title: "Cream Cake", desc: "Create anything you desire.", img: cake1, price: 47},
         {id:2, title: "Fruit Torte", desc: "We don't have to be concerned.", img: cake2, price: 62},

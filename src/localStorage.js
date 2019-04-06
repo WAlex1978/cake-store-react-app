@@ -1,11 +1,18 @@
+import { initState } from './components/reducers/StoreReducer';
+
 export const loadState = () => {
     try {
-        const state = localStorage.getItem('cart');
-        if (state === null) {
+        const cart = localStorage.getItem('cart');
+        if (cart === null) {
             return undefined;
         }
 
-        return JSON.parse(state);
+        return ({
+            cake: initState.cake,
+            cupcake: initState.cupcake,
+            cart: JSON.parse(cart.cart),
+            total: JSON.parse(cart.total),
+        });
     }
     catch (err) {
         return undefined;
