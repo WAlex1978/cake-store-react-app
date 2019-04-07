@@ -1,4 +1,4 @@
-<h1>Cake Store - Shopping Cart App</h1>
+<h1>Cake Store</h1>
 
 Shopping cart based web application built in React that utilizes Redux for state management. Includes a responsive UI design that uses Shards-React and Material-UI elements as well as self-defined styled components.
 
