@@ -1,4 +1,4 @@
-import { initState } from './components/reducers/StoreReducer';
+import initState from './components/reducers/initState';
 
 export const loadState = () => {
     try {
