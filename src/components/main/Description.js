@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Styled from '../../styled-components/Styled';
 
+// Non functional block of placeholder text
 class Description extends Component {
     render() { 
         return (

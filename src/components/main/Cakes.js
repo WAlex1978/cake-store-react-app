@@ -9,22 +9,32 @@ const mapStateToProps = (state) => {
     }
 }
 
+// Displays all cakes in store
 class Cakes extends Component {
     render() { 
         return (
             <Styled.Section padding="40px 0 20px 0">
                 <Styled.Wrapper>
                     <Styled.Grid>
+
+                        {/* For every cake item display a 2 column block */}
+                        {/* Block column displayed will depend on item index */}
+                        {/* Opens dialog on click which displays item details and price */}
                         {this.props.cake.map((cake, i) => (
                             <Styled.Div key={cake.id} display="flex" col={i%2 === 0 ? (1): 2} 
                                 style={{cursor: "pointer"}} onClick={() => this.props.toggle(cake)}>
+
+                                {/* Left column, cake image */}
                                 <Styled.Image image={cake.img} height="32vh" width="55%" />
+
+                                {/* Right column, title and description */}
                                 <Styled.Div width="60%" display="flex" direction="column" align="center" justify="center">
                                     <Styled.Text size="2.4rem">{cake.title}</Styled.Text>
                                     <Styled.Text size="1.5rem">{cake.desc}</Styled.Text>
                                 </Styled.Div>
                             </Styled.Div>
                         ))}
+                        
                     </Styled.Grid>
                 </Styled.Wrapper>
             </Styled.Section>

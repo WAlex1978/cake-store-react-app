@@ -15,10 +15,14 @@ const mapStateToProps = (state) => {
     }
 }
 
+// The shopping cart table footer
+// Includes total cost and checkout button
 class CartFooter extends Component {
     render() { 
         return (
             <Fragment>
+
+                {/* Total cost */}
                 <Styled.Text size="1.4rem">
                     <Row>
                         <Col xs={9} />
@@ -26,15 +30,17 @@ class CartFooter extends Component {
                         <Col xs={2} style={{textAlign: "right"}}>${this.props.total.toFixed(2)}</Col>
                     </Row>
                 </Styled.Text>
-                    <Row>
-                        <Col xs={9} />
-                        <Col xs={3} style={{marginTop: "30px"}}>
-                            <Button block squared theme="success">
-                                <FontAwesomeIcon icon={faLock} style={{marginRight: "5px"}}/>
-                                Checkout
-                            </Button>
-                        </Col>
-                    </Row>
+
+                {/* Checkout button, currently no functionality */}
+                <Row>
+                    <Col xs={9} />
+                    <Col xs={3} style={{marginTop: "30px"}}>
+                        <Button block squared theme="success">
+                            <FontAwesomeIcon icon={faLock} style={{marginRight: "5px"}}/>
+                            Checkout
+                        </Button>
+                    </Col>
+                </Row>
             </Fragment>
 
         );

@@ -9,13 +9,17 @@ import { faFacebookSquare, faTwitterSquare, faInstagram } from '@fortawesome/fre
 
 library.add(faFacebookSquare, faTwitterSquare, faInstagram)
 
+// Non functional footer for app pages
 class Footer extends Component {
     render() { 
         return (
             <Styled.Section padding="90px 0 40px 0">
                 <Styled.Wrapper width="70%">
                     <Container fluid>
+                        {/* Footer broken into 3 columns */}
                         <Row>
+                            
+                            {/* Cake Store name + placeholder text */}
                             <Col xs={4} style={{borderRight: "1px solid"}}>
                                 <Styled.Text align="center" size="1.2rem" style={{fontWeight: 400}}>
                                     Alex's Cakes
@@ -24,6 +28,8 @@ class Footer extends Component {
                                     <p>They say everything looks better with odd numbers of things.</p>
                                 </Styled.Text>
                             </Col>
+
+                            {/* Cake store hours of operation */}
                             <Col xs={4}>
                                 <Styled.Text align="center" size="1.2rem" style={{fontWeight: 400}}>
                                     Hours
@@ -34,11 +40,15 @@ class Footer extends Component {
                                     Sunday: Closed
                                 </Styled.Text>
                             </Col>
+
+                            {/* Cake store social media links, non functional */}
                             <Col xs={4} style={{borderLeft: "1px solid"}}>
                                 <Styled.Text align="center" size="1.2rem" style={{fontWeight: 400}}>
                                     Contact
                                 </Styled.Text>
                                 <Styled.Div display="flex" justify="space-around" width="50%" margin="10px auto 0 auto">
+
+                                    {/* Color listed to keep gray icon color */}
                                     <Link style={{color: "rgb(90, 97, 105)"}}><FontAwesomeIcon icon={faFacebookSquare} size="2x"/></Link>
                                     <Link style={{color: "rgb(90, 97, 105)"}}><FontAwesomeIcon icon={faTwitterSquare} size="2x"/></Link>
                                     <Link style={{color: "rgb(90, 97, 105)"}}><FontAwesomeIcon icon={faInstagram} size="2x"/></Link>

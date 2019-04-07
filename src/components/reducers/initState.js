@@ -14,7 +14,10 @@ import cupcake4 from '../images/royal-red.jpg';
 import cupcake5 from '../images/floral-pastel.jpg';
 import cupcake6 from '../images/party-muffin.jpg'
 
+// Exports the initial state
 const initState = {
+
+    // Cake items in the store
     cake: [
         {id:1, title: "Cream Cake", desc: "Create anything you desire.", img: cake1, price: 47},
         {id:2, title: "Fruit Torte", desc: "We don't have to be concerned.", img: cake2, price: 62},
@@ -25,6 +28,8 @@ const initState = {
         {id:7, title: "Color Palette", desc: "It's all a game of angles.", img: cake7, price: 62},
         {id:8, title: "Date Cake", desc: "Put your feelings into it.", img: cake8, price: 47},
     ],
+
+    // Cupcake items
     cupcake: [
         {id:9, title: "Strawberry Tart", desc: "Always one step further.", img: cupcake1, price: 1.5},
         {id:10, title: "Sweet Chocolate", desc: "There's really no end to this.", img: cupcake2, price: 1.65},
@@ -33,7 +38,11 @@ const initState = {
         {id:13, title: "Floral Pastel", desc: "We have plenty of time.", img: cupcake5, price: 2.1},
         {id:14, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6, price: 1.4},
     ],
+
+    // Cart
     cart: [],
+
+    // Total price
     total: 0
 }
 

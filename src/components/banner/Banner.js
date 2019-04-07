@@ -4,6 +4,7 @@ import Img from '../images/main-banner.jpg';
 
 import Image from '../../styled-components/Image';
 
+// Banner image component
 class Banner extends Component {
     render() { 
         return (

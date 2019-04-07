@@ -9,12 +9,16 @@ const mapStateToProps = (state) => {
     }
 }
 
+// The shopping cart table header
 class CartHeader extends Component {
     render() { 
         return (
             <Styled.Text size="1.47rem">
                 <Row>
+                    {/* Occupies 3 columns of space, counts the number of items in cart */}
                     <Col xs={6}>My Cart ( {this.props.cart.length} )</Col>
+
+                    {/* Text aligned right */}
                     <Col xs={2} style={{textAlign: "right"}}>Price</Col>
                     <Col xs={2} style={{textAlign: "right"}}>Qty</Col>
                     <Col xs={2} style={{textAlign: "right"}}>Total</Col>
