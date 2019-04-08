@@ -39,11 +39,11 @@ const initState = {
         {id:14, title: "Party Muffin", desc: "Bring them into your world.", img: cupcake6, price: 1.4},
     ],
 
-    // Cart
+    // Shopping cart
     cart: [],
 
-    // Total price
-    total: 0
+    // Total price of items in cart
+    total: 0,
 }
 
 export default initState;
