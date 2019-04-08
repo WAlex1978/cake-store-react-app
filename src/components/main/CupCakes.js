@@ -16,7 +16,7 @@ class CupCakes extends Component {
             <Styled.Section top="20px" bottom="20px">
             {/* Section with a top and bottom padding of 20px each */}
 
-                <Styled.Wrapper>
+                <Styled.Wrapper width="90%">
                     <Styled.Grid>
 
                         {/* Loops through state for every cake item */}
