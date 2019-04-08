@@ -17,17 +17,18 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-// Style attributes for price and quantity
-const attribute = {
-    fontSize: "1.25em",
+// Style declaration
+// Text aligns right
+// Font size of 1.25rem
+const right = {
+    fontSize: "1.25rem",
     textAlign: "right",
-    color: "black"
 };
 
-// Shopping cart table items
 class CartItems extends Component {
 
-    // Calls to remove from cart, provides selected item as parameter
+    // Removes selected item from cart
+    // Provides selected item as parameter
     removeFromCart = (item) => {
         this.props.removeFromCart(item);
     }
@@ -35,41 +36,46 @@ class CartItems extends Component {
     render() { 
         return (
             <Fragment>
-                <Styled.HR width="100%"/>
+                <Styled.HR/>
 
-                {/* For each item in the cart */}
+                {/* Loop through each item in shopping cart */}
+                {/* Each row seperated by 8px margin */}
                 {this.props.cart.map((cart, i) => (
                     <Row key={cart.id} style={{marginTop: "8px"}}>
 
-                        {/* Item image, size adjusts for responsive layout */}
+                        {/* Item image occupies one column of space */}
+                        {/* Size adjusts for smaller displays */}
                         <Col xs={3} xl={2}><Styled.Image image={cart.img} width="150px" height="130px" /></Col>
 
-                        {/* Item title and remove from cart button, occupies 2 columns of space */}
+                        {/* Item title and remove from cart button */}
+                        {/* Occupies two columns of space */}
+                        {/* Size adjusts for smaller displays */}
                         <Col xs={3} xl={4}>
                             <Styled.Div display="flex" direction="column">
-                                <Styled.Text size="1.5rem">{cart.title}</Styled.Text>
+                                <Styled.Text>{cart.title}</Styled.Text>
 
-                                {/* Calls removeFromCart on click */}
+                                {/* Remove from cart button */}
+                                {/* On click calls remove from cart action */}
+                                {/* Provides current item as paramters */}
                                 <Styled.Text size="1rem" onClick={() => this.removeFromCart(cart)} 
-                                style={{cursor: "pointer", width: "1px"}}>Remove</Styled.Text>
+                                    style={{cursor: "pointer", width: "1px"}}>Remove</Styled.Text>
+
                             </Styled.Div>
                         </Col>
 
-                        {/* Item price, fixed to 2 decimal places */}
-                        <Col xs={2}><div style={attribute}>${cart.price.toFixed(2)}</div></Col>
+                        {/* Item price, quantity, and total price */}
+                        <Col xs={2}><Styled.Text style={right}>${cart.price.toFixed(2)}</Styled.Text></Col>
+                        <Col xs={2}><Styled.Text style={right}>{cart.quantity}</Styled.Text></Col>
 
-                        {/* Item quantity */}
-                        <Col xs={2}><div style={attribute}>{cart.quantity}</div></Col>
-
-                        {/* Total price of the item, base price * quantity */}
-                        <Col xs={2}><div style={attribute}>${(cart.price*cart.quantity).toFixed(2)}</div></Col>
+                        {/* Total price = base price * quantity */}
+                        <Col xs={2}><Styled.Text style={right}>${(cart.price*cart.quantity).toFixed(2)}</Styled.Text></Col>
                     </Row>
                 ))}
 
-                {/* Display if shopping cart is empty */}
+                {/* Displays only if shopping cart is empty */}
                 {this.props.cart.length === 0 ? (
                     <Styled.Div width="100%" height="200px" display="flex" align="center" justify="center">
-                        <Styled.Text size="1.25rem">Cart is empty</Styled.Text>
+                        <Styled.Text>Cart is empty</Styled.Text>
                     </Styled.Div>
                 ): null}
 

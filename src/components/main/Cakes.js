@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
-// Library of styled components
 import Styled from '../../styled-components/Styled';
 
 const mapStateToProps = (state) => {

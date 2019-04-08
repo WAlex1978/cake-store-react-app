@@ -15,14 +15,12 @@ const mapStateToProps = (state) => {
     }
 }
 
-// The shopping cart table footer
-// Includes total cost and checkout button
 class CartFooter extends Component {
     render() { 
         return (
             <Fragment>
 
-                {/* Total cost */}
+                {/* Total cost of cart items*/}
                 <Styled.Text size="1.4rem">
                     <Row>
                         <Col xs={9} />
@@ -31,7 +29,8 @@ class CartFooter extends Component {
                     </Row>
                 </Styled.Text>
 
-                {/* Checkout button, currently no functionality */}
+                {/* Checkout button */}
+                {/* Uses font awsome for icon */}
                 <Row>
                     <Col xs={9} />
                     <Col xs={3} style={{marginTop: "30px"}}>
@@ -41,6 +40,7 @@ class CartFooter extends Component {
                         </Button>
                     </Col>
                 </Row>
+                
             </Fragment>
 
         );
