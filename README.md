@@ -2,7 +2,7 @@
 
 Shopping cart based web application built in React that utilizes Redux for state management. Includes a responsive UI design that uses Shards-React and Material-UI elements as well as self-defined styled components.
 
-[Live Preview](https://61p4ovpjyz.codesandbox.io/)
+[Live Preview](https://21175mxwqj.codesandbox.io/)
 
 <h1>Functionalities</h1>
 
