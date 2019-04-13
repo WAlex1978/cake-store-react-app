@@ -20,7 +20,7 @@ class Success extends Component {
                 <Styled.Wrapper width="50%">
                     <Styled.Text size="2.2rem" align="center" margin="0 0 10px 0">Congratulations!</Styled.Text>
                     <Styled.Text align="center">
-                        <p>You will receive a confirmation email with the status and details of your order.</p>
+                        <p>Thank you for shopping with us today. You will receive a confirmation email with the details and status of your order shortly.</p>
                     </Styled.Text>
                 </Styled.Wrapper>
             </Styled.Section>
