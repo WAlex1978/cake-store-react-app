@@ -51,7 +51,7 @@ class Main extends Component {
     // Update quantity of selected item
     // Quantity limited to between 0 and 50
     updateQty = e => {
-        if (e.target.validity.valid && e.target.value >= 0 && e.target.value <= 50) {
+        if (e.target.validity.valid && e.target.value > 0 && e.target.value <= 50) {
             this.setState({ quantity: e.target.value });
         }
     }
