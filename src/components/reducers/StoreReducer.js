@@ -43,6 +43,10 @@ const StoreReducer = (state = initState, action) => {
                 cart: item,
             }
 
+        // Empty shopping cart
+        case 'EMPTY_CART':
+            return initState;
+            
         default:
             return state;
       }

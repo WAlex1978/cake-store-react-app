@@ -16,6 +16,13 @@ const mapStateToProps = (state) => {
 }
 
 class CartFooter extends Component {
+    checkValid = () => {
+        if (this.props.total === 0)
+            return true;
+    
+        return false;
+    }
+
     render() { 
         return (
             <Fragment>
@@ -34,9 +41,8 @@ class CartFooter extends Component {
                 <Row>
                     <Col xs={9} />
                     <Col xs={3} style={{marginTop: "30px"}}>
-                        <Button block squared theme="success">
-                            <FontAwesomeIcon icon={faLock} style={{marginRight: "5px"}}/>
-                            Checkout
+                        <Button block squared theme="success" disabled={this.checkValid()} onClick={() => this.props.order()}>
+                            <FontAwesomeIcon icon={faLock} style={{marginRight: "5px"}}/>Checkout
                         </Button>
                     </Col>
                 </Row>
