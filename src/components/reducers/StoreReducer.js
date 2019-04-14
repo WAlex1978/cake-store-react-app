@@ -42,10 +42,6 @@ const StoreReducer = (state = initState, action) => {
                 ...state,
                 cart: item,
             }
-
-        // Empty shopping cart
-        case 'EMPTY_CART':
-            return initState;
             
         default:
             return state;

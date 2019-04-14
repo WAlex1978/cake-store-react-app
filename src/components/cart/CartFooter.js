@@ -41,7 +41,7 @@ class CartFooter extends Component {
                 <Row>
                     <Col xs={9} />
                     <Col xs={3} style={{marginTop: "30px"}}>
-                        <Button block squared theme="success" disabled={this.checkValid()} onClick={() => this.props.order()}>
+                        <Button block squared theme="success" disabled={this.checkValid()}>
                             <FontAwesomeIcon icon={faLock} style={{marginRight: "5px"}}/>Checkout
                         </Button>
                     </Col>
